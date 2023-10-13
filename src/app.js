@@ -1,7 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
-const movieRoutes = require("./routes/movieRoutes"); // Cambiar el nombre del módulo de rutas a algo relacionado con películas
+const movieRoutes = require("./routes/movieRoutes");
 require("./config/database");
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Rutas
-app.use("/api", movieRoutes); // Cambiar la ruta base a algo relacionado con películas
+app.use("/api", movieRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
